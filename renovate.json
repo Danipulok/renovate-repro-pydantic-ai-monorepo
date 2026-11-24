@@ -1,0 +1,6 @@
+{
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {"matchManagers": ["pep621"], "rangeStrategy": "update-lockfile"}
+  ]
+}
