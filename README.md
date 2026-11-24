@@ -36,9 +36,11 @@ One branch for both packages, as `group:monorepos` gives other monorepos. Adding
 {
   "matchSourceUrls": ["https://github.com/pydantic/pydantic-ai"],
   "groupName": "pydantic-ai monorepo",
-  "matchUpdateTypes": ["major", "minor", "patch"]
+  "matchUpdateTypes": ["digest", "patch", "minor", "major"]
 }
 ```
+
+With the packages on separate branches, the `pydantic-evals` branch can end up already in the base branch, and Renovate then opens an empty PR from it on every release: https://github.com/renovatebot/renovate/issues/47716.
 
 ## Run it
 
